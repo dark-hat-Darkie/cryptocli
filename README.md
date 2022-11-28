@@ -64,6 +64,10 @@ To run the tests in watch mode, enter the following command
 $ npm run test:watch
 ```
 # Getting Started
+## Place the CSV file
+Please place the CSV file inside src/data/ directory, having name `transactions.csv`.
+
+## How to use?
 Using this application is pretty easy. It accepts **two** optional arguments:
 |Argument|Required|Description|Example
 |-|-|-|-|
