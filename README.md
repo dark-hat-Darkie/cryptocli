@@ -145,6 +145,7 @@ Transaction {
 |filepath|yes|a path that resolves to the targeted CSV file|"src/data/transactions.csv"
 |token|no| portfolio value filtered by the given token. Returns all tokens if not provided|"BTC" / "XRP" / "ETH"
 |date|no|portfolio value on the specified date (YYYY-MM-DD). Returns latest values if not provided|"2019-09-19"
+
 Returns --- nothing `(void)`
 ### `updatePortfolioBy(transaction: Transaction, token?: string, date?: string): void`
 *Gets called every time with a new row, updates portfolio values*
@@ -152,32 +153,37 @@ Returns --- nothing `(void)`
 |-|-|-|-|
 |transaction|yes|the single row transaction data|`{timestamp: 16557476756, transaction_type: DEPOSIT, token: BTC, amount: 0.534646}`
 |token|no| portfolio value filtered by the given token. Returns all tokens if not provided|"BTC" / "XRP" / "ETH"
-|date|no|portfolio value on the specified date (YYYY-MM-DD). Returns latest values if not provided|"2019-09-19"
+|date|no|portfolio value on the specified date (YYYY-MM-DD). Returns latest values if not provided|"2019-09-19"|
+
 Returns --- nothing `(void)`
 ### `calculateEachTransaction(transaction: Transaction): void`
 *Calculates total by processing each transaction*
 |Params|Required|Description|Example
 |-|-|-|-|
-|transaction|yes|the single row transaction data|`{timestamp: 16557476756, transaction_type: DEPOSIT, token: BTC, amount: 0.534646}`
+|transaction|yes|the single row transaction data|`{timestamp: 16557476756, transaction_type: DEPOSIT, token: BTC, amount: 0.534646}`|
+
 Returns --- nothing `(void)`
 ### `calculateResult(): Promise<void>`
 *Calculates final result after all the data read is completed*
 |Params|Required|Description|Example
 |-|-|-|-|
-|n/a|n/a|n/a|n/a
+|n/a|n/a|n/a|n/a|
+
 Returns --- nothing `(void)`
 ### `printResult(): void`
 *Prints final result in the command line*
 |Params|Required|Description|Example
 |-|-|-|-|
-|n/a|n/a|n/a|n/a
+|n/a|n/a|n/a|n/a|
+
 Returns --- nothing `(void)`
 ### 2. ExchangeRateService
 ### `getExchangeRate(): Promise<any>`
 *Get exchange rate from API*
 |Params|Required|Description|Example
 |-|-|-|-|
-|n/a|n/a|n/a|n/a
+|n/a|n/a|n/a|n/a|
+
 Returns --- `any`
 ## Utility Functions
 ### `isAfter(date: string, timestamp: string): boolean`
@@ -185,7 +191,8 @@ Returns --- `any`
 |Params|Required|Description|Example
 |-|-|-|-|
 |date|yes|the user input date|"2018-11-23"
-|timestamp|yes|the transaction timestamp|"2019-10-03"
+|timestamp|yes|the transaction timestamp|"2019-10-03"|
+
 Returns --- `boolean`
 
 # Performance
